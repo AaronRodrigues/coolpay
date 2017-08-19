@@ -1,9 +1,8 @@
 require './app/models/request'
 
 describe Request do
-  subject(:request) { described_class.new(uri) }
+  subject(:request) { described_class.new(uri: uri) }
   let(:uri) {"https://www.facebook.com"}
-  let(:header) { { 'Content-Type': 'application/json' } }
   let(:credentials) {{"username": "your_username", "apikey": "5up3r$ecretKey!"} }
 
 
@@ -20,7 +19,7 @@ describe Request do
 
   describe('create_post_request') do
     before do
-      @http_request = request.set_post_request(credentials, header)
+      @http_request = request.set_post_request(body: credentials)
     end
 
     it('creates a post request') do

@@ -1,15 +1,16 @@
 class Request
 
-  attr_reader :uri, :http, :header
-  
-  def initialize(uri)
+  attr_reader :uri, :http
+
+  CONTENT_TYPE = {'Content-Type': 'application/json'}
+
+  def initialize(uri:)
     @uri = URI.parse(uri)
-    @header = {'Content-Type': 'application/json'}
     @http = create_http
   end
 
-  def set_post_request(body, header)
-    request = Net::HTTP::Post.new(uri.request_uri, header)  
+  def set_post_request(body:)
+    request = Net::HTTP::Post.new(uri.request_uri, CONTENT_TYPE)  
     request.body = body.to_json
     request
   end
