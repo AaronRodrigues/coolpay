@@ -1,4 +1,6 @@
-require './app/models/request'
+require './app/models/authorization'
+require './app/models/credentials'
+require './app/models/client'
 require 'dotenv/load'
 USERNAME      = ENV['USERNAME']
 API_KEY       = ENV['API_KEY']
@@ -15,13 +17,10 @@ class Coolpay < Sinatra::Base
   end
 
   post '/users' do
-    payment = Request.new(uri: 'https://coolpay.herokuapp.com/api/login')
-    credentials = {
-      'username': "#{USERNAME}",
-      'apikey': "#{API_KEY}"
-    }
-    request = payment.set_post_request(body: credentials)
-    response = payment.http.request(request)
+    client = Client.new(uri: "https://coolpay.herokuapp.com/api/login")
+    credentials = Credentials.new.format_json
+    auth = Authorization.new(client: client, credentials: credentials)
+    auth.send
     p response.body
     redirect to '/transactions'
   end

@@ -1,4 +1,4 @@
-class Request
+class Client
 
   attr_reader :uri, :http
 
@@ -13,6 +13,10 @@ class Request
     request = Net::HTTP::Post.new(uri.request_uri, CONTENT_TYPE)  
     request.body = body.to_json
     request
+  end
+
+  def get_request_uri
+    uri.request_uri
   end
 
   private

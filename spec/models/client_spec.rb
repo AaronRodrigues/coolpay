@@ -1,6 +1,6 @@
-require './app/models/request'
+require './app/models/client'
 
-describe Request do
+describe Client do
   subject(:request) { described_class.new(uri: uri) }
   let(:uri) {"https://www.facebook.com"}
   let(:credentials) {{"username": "your_username", "apikey": "5up3r$ecretKey!"} }
