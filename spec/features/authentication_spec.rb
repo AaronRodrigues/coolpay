@@ -2,6 +2,6 @@ feature 'User Authentication' do
   scenario 'Navigates to transactions payment is successful' do
     visit '/'
     click_button "Pay"
-    expect(current_path).to eq '/transactions'
+    expect(page).to have_content 'Hello Aaron'
   end
 end
