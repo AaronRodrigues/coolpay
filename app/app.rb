@@ -12,7 +12,7 @@ class Coolpay < Sinatra::Base
 
   helpers do
     def api
-      @api = CoolpayAPI.new
+      @api = API.new
     end
 
     def token

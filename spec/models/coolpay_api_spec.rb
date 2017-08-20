@@ -1,6 +1,6 @@
 require './app/models/coolpay_api'
 
-describe CoolpayAPI do
+describe API do
   subject(:api) { described_class.new(http_client_class: http_client_class, http_request_class: http_request_class) }
   let(:http) { double(:http, request: { "token": "0a1111-101010-10010-101a10-1111" })}
   let(:http_client) { double(:http_client, get_request_uri: '/login', http: http)}

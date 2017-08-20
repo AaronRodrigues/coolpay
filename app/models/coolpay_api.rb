@@ -1,7 +1,7 @@
 require_relative 'request'
 require_relative 'client'
 
-class CoolpayAPI
+class API
 
   attr_reader :http_client_class, :http_request_class
 
