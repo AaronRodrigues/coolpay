@@ -94,7 +94,7 @@ video {
    background: rgba(0,0,0,0.5);
 }
 
-#payments-container {
+#transaction-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
