@@ -16,4 +16,4 @@ class HTTPClient
       http.use_ssl = true
       http
     end
-  end
+end
