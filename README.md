@@ -4,7 +4,7 @@
 
 1. Clone this repository by typing the following in the command line.
    ```
-   git clone git@github.com:AaronRodrigues/chatbot.git
+   git@github.com:AaronRodrigues/coolpay.git
    ```
 2. To install dependencies, type:
    ```
