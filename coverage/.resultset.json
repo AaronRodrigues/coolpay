@@ -1,15 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/aaron/Dropbox/Projects/coolpay/spec/features/add_recipient_spec.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
       "/home/aaron/Dropbox/Projects/coolpay/spec/features/authentication_spec.rb": [
         1,
         1,
@@ -20,7 +11,7 @@
         null,
         null
       ],
-      "/home/aaron/Dropbox/Projects/coolpay/spec/features/make_payment_spec.rb": [
+      "/home/aaron/Dropbox/Projects/coolpay/spec/features/payment_spec.rb": [
         1,
         1,
         1,
@@ -30,6 +21,15 @@
         1,
         1,
         null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/aaron/Dropbox/Projects/coolpay/spec/features/recipient_spec.rb": [
+        1,
+        1,
+        1,
         1,
         1,
         null,
@@ -214,6 +214,6 @@
         null
       ]
     },
-    "timestamp": 1503268084
+    "timestamp": 1503268862
   }
 }
