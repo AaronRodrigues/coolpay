@@ -1,4 +1,4 @@
-require './app/models/coolpay_api'
+require './app/models/api'
 
 describe API do
   subject(:api) { described_class.new(http_client_class: http_client_class, http_request_class: http_request_class) }

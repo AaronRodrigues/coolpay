@@ -6,7 +6,7 @@ class Payment
     @id = id
   end
 
-  def format_json
+  def to_json
     {
       "payment": {
       "amount": amount,

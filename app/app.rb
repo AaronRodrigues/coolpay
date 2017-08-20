@@ -5,7 +5,7 @@ require 'json'
 require 'dotenv/load'
 
 require_relative 'models/credentials'
-require_relative 'models/coolpay_api'
+require_relative 'models/api'
 
 class Coolpay < Sinatra::Base
   enable :sessions

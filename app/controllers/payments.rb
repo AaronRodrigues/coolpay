@@ -12,7 +12,7 @@ class Coolpay < Sinatra::Base
   end
 
   post '/payments' do
-    message = Payment.new(amount: params['amount'], currency: params['currency'], id: params['id']).format_json
+    message = Payment.new(amount: params['amount'], currency: params['currency'], id: params['id']).to_json
     api.send_request(path: 'payments', type: 'POST', token: token, message: message)
     redirect to '/payments'
   end

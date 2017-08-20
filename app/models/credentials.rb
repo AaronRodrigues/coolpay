@@ -5,7 +5,7 @@ class Credentials
     @apikey = apikey
   end
 
-  def format_json
+  def to_json
     { 'username': username, 'apikey': apikey }
   end
 
