@@ -9,9 +9,9 @@ class Payment
   def format_json
     {
       "payment": {
-        "amount": amount,
-        "currency": currency,
-        "recipient_id": id
+      "amount": amount,
+      "currency": currency,
+      "recipient_id": id
       }
     }
   end

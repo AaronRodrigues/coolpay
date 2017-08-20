@@ -1,11 +1,11 @@
-require_relative 'http_request'
-require_relative 'http_client'
+require_relative 'request'
+require_relative 'client'
 
 class CoolpayAPI
 
   attr_reader :http_client_class, :http_request_class
 
-  def initialize(http_client_class: HTTPClient, http_request_class: HTTPRequest)
+  def initialize(http_client_class: Client, http_request_class: Request)
     @http_client_class = http_client_class
     @http_request_class = http_request_class
   end

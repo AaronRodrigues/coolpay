@@ -1,6 +1,6 @@
-require './app/models/http_request'
+require './app/models/request'
 
-describe HTTPRequest do
+describe Request do
   let(:login_uri) { "/api/login" }
   let(:token) { 'you_are_cool'}
   let(:credentials) { {"username": "your_username", "apikey": "5up3r$ecretKey!"} }

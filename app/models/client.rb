@@ -1,4 +1,4 @@
-class HTTPClient
+class Client
     attr_reader :uri, :http
 
     def initialize(path:)

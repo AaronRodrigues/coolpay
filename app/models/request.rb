@@ -1,4 +1,4 @@
-class HTTPRequest
+class Request
 
   CONTENT_TYPE = {'Content-Type': 'application/json'}
 

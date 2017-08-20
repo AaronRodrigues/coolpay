@@ -1,6 +1,6 @@
-require './app/models/http_client'
+require './app/models/client'
 
-describe HTTPClient do
+describe Client do
   let(:path) {'login'}
   subject(:client) { described_class.new(path: path) }
 
