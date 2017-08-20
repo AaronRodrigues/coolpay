@@ -1,5 +1,7 @@
 # CoolPay
 
+[![Build Status](https://travis-ci.org/AaronRodrigues/coolpay.svg?branch=master)](https://github.com/AaronRodrigues/coolpay)
+
 ### Installation
 
 1. Clone this repository by typing the following in the command line.
