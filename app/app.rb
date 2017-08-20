@@ -1,6 +1,7 @@
 require './app/models/authorization'
 require './app/models/client'
 require './app/models/credentials'
+require './app/models/request'
 
 require 'dotenv/load'
 USERNAME      = ENV['USERNAME']
@@ -28,12 +29,19 @@ class Coolpay < Sinatra::Base
   post '/users' do
     client = Client.new(uri: "https://coolpay.herokuapp.com/api/login")
     credentials = Credentials.new.format_json
-    auth = Authorization.new(client: client, body: credentials).send
-    session[:token] = JSON.parse(auth.body)['token']
+    request = Request.new(type: 'POST', uri: client.get_request_uri)
+    response = client.http.request(request.build(message: credentials))
+    session[:token] = JSON.parse(response.body)['token']
     redirect to '/transactions'
   end
 
   get '/transactions' do
+    client = Client.new(uri: "https://coolpay.herokuapp.com/api/recipients")
+    get_request = Net::HTTP::Get.new(client.uri)
+    get_request['Authorization'] = "User #{token}" if token != nil
+    response = client.http.request(get_request)
+    @recipients = JSON.parse(response.body)['recipients']
+    p @recipients
     erb :'transactions/index'
   end
   
