@@ -4,14 +4,17 @@ require 'net/http'
 require 'json'
 require 'dotenv/load'
 
-require_relative 'models/client'
 require_relative 'models/credentials'
-require_relative 'models/request'
+require_relative 'models/coolpay_api'
 
 class Coolpay < Sinatra::Base
   enable :sessions
 
   helpers do
+    def api
+      @api = CoolpayAPI.new
+    end
+
     def token
       @token ||= session[:token]
     end
@@ -20,28 +23,8 @@ class Coolpay < Sinatra::Base
   get '/' do
     erb :'index'
   end
-
-  post '/users' do
-    client = Client.new(uri: "https://coolpay.herokuapp.com/api/login")
-    credentials = Credentials.new.format_json
-    request = Request.new(type: 'POST', uri: client.get_request_uri)
-    response = client.http.request(request.build(message: credentials))
-    session[:token] = JSON.parse(response.body)['token']
-    redirect to '/payments'
-  end
-
-  get '/payments' do
-    client = Client.new(uri: "https://coolpay.herokuapp.com/api/recipients")
-    request = Request.new(type: 'GET', uri: client.get_request_uri)
-    response = client.http.request(request.build(token: token))
-    @recipients = JSON.parse(response.body)['recipients']
-    erb :'payments/index'
-  end
-
-  post '/recipients' do
-    client = Client.new(uri: "https://coolpay.herokuapp.com/api/recipients")
-    request = Request.new(type: 'POST', uri: client.get_request_uri)
-    response = client.http.request(request.build(message: {'recipient': {'name': params[:recipient]}}, token: token))
-    redirect to '/payments'
-  end
 end
+
+require_relative 'controllers/payments'
+require_relative 'controllers/users'
+require_relative 'controllers/recipients'

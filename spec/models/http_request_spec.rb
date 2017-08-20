@@ -1,12 +1,11 @@
-require './app/models/request'
+require './app/models/http_request'
 
-describe Request do
+describe HTTPRequest do
+  let(:login_uri) { "/api/login" }
+  let(:token) { 'you_are_cool'}
+  let(:credentials) { {"username": "your_username", "apikey": "5up3r$ecretKey!"} }
   subject(:post) { described_class.new(type: 'POST', uri: login_uri) }
   subject(:get) { described_class.new(type: 'GET', uri: login_uri)}
-  let(:login_uri) { "/api/login" }
-  let(:token) { 'secret'}
-  let(:credentials) { {"username": "your_username", "apikey": "5up3r$ecretKey!"} }
-
 
   describe '#request' do
     context 'POST type' do
