@@ -1,7 +1,8 @@
-feature 'User Authentication' do
-  scenario 'Navigates to transactions payment is successful' do
+feature 'Authenticate user' do
+  scenario 'get a coolpay token' do
     visit '/'
-    click_button "Pay"
-    expect(page).to have_content 'Hello Aaron'
+    click_button "Make a payment"
+    expect(current_path).to eq '/payments'
+    expect(page).to have_content 'Hi Aaron!'
   end
 end

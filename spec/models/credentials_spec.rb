@@ -11,9 +11,8 @@ describe Credentials do
     end
 
     it('formats the given credentials into json format') do
-      credentials_default = described_class.new(username: "your_username", apikey: "5up3r$ecretKey!")
-      expect(credentials_default.format_json).to eq other
-
+      cr = described_class.new(username: "your_username", apikey: "5up3r$ecretKey!")
+      expect(cr.format_json).to eq other
     end
   end
 end

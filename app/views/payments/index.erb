@@ -1,0 +1,24 @@
+<div id='add_recipient'>
+  <form action='/recipients' method='post'>
+    <label for='recipient'>Recipient Name
+      <input type='text' name='recipient' id='recipient'/>
+    </label>
+      <input type='submit' value='Add Recipient'  />
+  </form>
+</div>
+
+<div id='recipients-container'>
+  <% @recipients.each do |recipient| %>
+    <div id='recipient'> <%= recipient['name'] %> </div>
+    <form action='/payments' method='post' name='paymentform'>
+      <input type="hidden" name="id" value="<%= recipient['id'] %>">
+      <label for='amount'>Amount
+        <input type='number' name='amount' required/>
+      </label>
+      <select name="currency" form="paymentform" required>
+        <option value="GBP">GBP</option>
+        <option value="USD">USD</option>
+      </select>
+    </form>
+  <% end %>
+</div>

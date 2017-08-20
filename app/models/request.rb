@@ -41,7 +41,7 @@ class Request
   end
 
   def set_authorization_header(token:)
-    request['Authorization'] = "User #{token}"
+    request['Authorization'] = "Bearer #{token}"
   end
 
   def set_body(message:)
