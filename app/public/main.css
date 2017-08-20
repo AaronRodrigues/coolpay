@@ -107,7 +107,7 @@ video {
   justify-content: center;
   background-color: hsla(0,0%,100%,0.50);
   border-radius: 10px;
-  border-style: dashed;
+  border-style: solid;
   border-color: grey;
   border-width: thin;
   margin: 5px;
