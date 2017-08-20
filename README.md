@@ -21,7 +21,7 @@
 ```
 As a User,
 So that I can use Coolpay,
-I want to login.
+I want to login with my credentials.
 
 As a User,
 So that I can make a transaction,
