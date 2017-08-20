@@ -5,7 +5,7 @@ feature 'Make a payment' do
     within '#paymentform-1' do
       fill_in :amount, with: 1000
       select 'GBP', from: 'currency'
-      click_button "Send coins"
+      click_button "Pay"
     end
     expect(current_path).to eq '/payments'
     expect(page).to have_content "1000 GBP"
