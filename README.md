@@ -1,8 +1,6 @@
 # CoolPay
 
-[![Build Status](https://travis-ci.org/AaronRodrigues/coolpay.svg?branch=master)](https://github.com/AaronRodrigues/coolpay)
-
-[![Coverage Status](https://coveralls.io/repos/github/AaronRodrigues/coolpay/badge.svg?branch=master)](https://coveralls.io/github/AaronRodrigues/coolpay?branch=master)
+[![Build Status](https://travis-ci.org/AaronRodrigues/coolpay.svg?branch=master)](https://github.com/AaronRodrigues/coolpay)[![Coverage Status](https://coveralls.io/repos/github/AaronRodrigues/coolpay/badge.svg?branch=master)](https://coveralls.io/github/AaronRodrigues/coolpay?branch=master)
 
 ### Installation
 
