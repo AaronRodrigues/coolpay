@@ -1,12 +1,12 @@
 # CoolPay
 
-[![Build Status](https://travis-ci.org/AaronRodrigues/coolpay.svg?branch=master)](https://github.com/AaronRodrigues/coolpay)[![Coverage Status](https://coveralls.io/repos/github/AaronRodrigues/coolpay/badge.svg?branch=master)](https://coveralls.io/github/AaronRodrigues/coolpay?branch=master)
+[![Build Status](https://travis-ci.org/AaronRodrigues/coolpay.svg?branch=master)](https://github.com/AaronRodrigues/coolpay) [![Coverage Status](https://coveralls.io/repos/github/AaronRodrigues/coolpay/badge.svg?branch=master)](https://coveralls.io/github/AaronRodrigues/coolpay?branch=master)
 
 ### Technologies used
 - Ruby 2.4.1
 - Rails 5.1.2
 - Test framework: RSpec
-- VCS: GIT
+- Version Control System: GIT
 - HTML/CSS
 
 ### USER STORIES
@@ -60,4 +60,17 @@ I want to able to see the status of my payment.
 8. If authorization passes, you will be directed to the transactions page.
 9. On the transactions page you can Add Recipients and make transactions.
 
+### Approach
 
+1. A User lands on a page and clicks a button, which verifies his credentials.
+2. Credentials are stored in a .env file so that they are not pushed to Github.
+3. The user is directed to a page where recipients can be added using a simple form.
+4. Recipients will be displayed in the order they were last added.
+5. Transaction details are listed on the same page.
+
+
+
+### Possible Further Improvements
+
+1. Make the Front End look prettier by using Bootstrap.
+2. Use a RESTful approach and have transaction history on a seperate page.
