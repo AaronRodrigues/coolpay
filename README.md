@@ -65,7 +65,8 @@ I want to able to see the status of my payment.
 2. Credentials are stored in a .env file so that they are not pushed to Github.
 3. The user is directed to a page where recipients can be added using a simple form.
 4. Recipients will be displayed in the order they were last added.
-5. Transaction details are listed on the same page.
+5. The User can send money in 3 currencies: GBP, USD and EUR.
+6. Transaction details are listed on the same page.
 
 
 
