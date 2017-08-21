@@ -57,7 +57,7 @@ I want to able to see the status of my payment.
    localhost:9292
    ```
 8. If authorization passes, you will be directed to the transactions page.
-9. On the transactions page you can Add Recipients and make transactions.
+9. On the transactions page you can add Recipients and make transactions.
 
 ### Approach
 
